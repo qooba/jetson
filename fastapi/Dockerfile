@@ -8,7 +8,10 @@ COPY ./gunicorn_conf.py /gunicorn_conf.py
 COPY ./start-reload.sh /start-reload.sh
 RUN chmod +x /start-reload.sh
 RUN rm /usr/bin/qemu-aarch64-static
+COPY ./app /app
 WORKDIR /app/
 ENV PYTHONPATH=/app
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 EXPOSE 80
 CMD ["/start.sh"]
