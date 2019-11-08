@@ -7,7 +7,7 @@ RUN chmod +x /start.sh
 COPY ./gunicorn_conf.py /gunicorn_conf.py
 COPY ./start-reload.sh /start-reload.sh
 RUN chmod +x /start-reload.sh
-RUN rm /usr/bin/qemu-arm-static
+RUN rm /usr/bin/qemu-aarch64-static
 WORKDIR /app/
 ENV PYTHONPATH=/app
 EXPOSE 80
