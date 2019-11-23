@@ -102,3 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+qemu-aarch64-static
