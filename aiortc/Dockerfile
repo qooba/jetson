@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt -yq install libffi-dev libssl-dev libsrtp2-dev
 RUN pip3 install aiohttp aiortc
 RUN pip3 install minio jinja2 cachetools pyyaml pyzmq watchdog[watchmedo]
-RUN apt install curl git  cmake -yq
+RUN apt install curl git cmake ack -yq
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/qooba/vim-python-ide/master/setup.sh)"
 WORKDIR /app/
 CMD ["/bin/bash"]
