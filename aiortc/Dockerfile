@@ -8,5 +8,6 @@ RUN pip3 install aiohttp aiortc
 RUN pip3 install minio jinja2 cachetools pyyaml pyzmq watchdog[watchmedo]
 RUN apt install curl git cmake ack vim-youcompleteme vim-syntastic -yq
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/qooba/vim-python-ide/master/setup.sh)"
+RUN pip3 install aiohttp_cors ujson
 WORKDIR /app/
 CMD ["/bin/bash"]
