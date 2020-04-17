@@ -14,5 +14,6 @@ COPY blis-0.4.0-cp36-cp36m-linux_aarch64.whl .
 RUN pip3 install blis-0.4.0-cp36-cp36m-linux_aarch64.whl
 RUN pip3 install spacy
 RUN pip3 install fastai
+RUN pip3 install scikit-learn
 #RUN cd /fastai && pip3 install $(python3 setup.py -q deps --dep-groups=core,vision)
 CMD [ "bash" ]
